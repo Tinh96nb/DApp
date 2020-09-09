@@ -1,0 +1,55 @@
+version: "3"
+services:
+  dapp:
+    container_name: "eth-dapp"
+    build: .
+    volumes:
+      - .:/app/
+      - /app/node_modules
+    ports:
+      - "${DAPP_PORT}:${DAPP_PORT}"
+    depends_on:
+      - ganache
+      - database
+      - ipfs
+  database:
+    container_name: "eth-database"
+    image: "mysql:5.5"
+    ports:
+      - "${DB_PORT}:3306"
+    environment:
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    command:
+      - --innodb_use_native_aio=0
+      - --character-set-server=utf8
+      - --collation-server=utf8_unicode_ci
+    networks:
+      default:
+        ipv4_address: ${DB_HOST}
+  ganache:
+    container_name: "eth-ganache"
+    build:
+      context: .
+      dockerfile: Dockerfile.ganache
+    ports:
+      - "${GANACHE_PORT}:8545"
+    networks:
+      default:
+        ipv4_address: ${GANACHE_HOST}
+  ipfs:
+    container_name: "eth-ipfs"
+    image: ipfs/go-ipfs:latest
+    hostname: ipfs_host
+    ports:
+    - "${IPFS_PORT_UI}:5001"
+    - "4001:4001"
+    - "${IPFS_PORT_GATEWAY}:8080"
+    networks:
+      default:
+        ipv4_address: ${IPFS_HOST}
+networks:
+  default:
+    external:
+      name: private_net

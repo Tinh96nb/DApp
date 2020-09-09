@@ -1,0 +1,30 @@
+{
+  "name": "docker-ethereum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/index.js",
+  "scripts": {
+    "test:contract": "./node_modules/.bin/truffle test",
+    "deploy:contract": "./node_modules/.bin/truffle migrate --reset --compile-all",
+    "init:db": "node ./server/models/init.js",
+    "migrate:db": "./node_modules/.bin/knex migrate:latest",
+    "start": "yarn deploy:contract && yarn migrate:db && yarn init:db && pm2-dev start ./server/index.js"
+  },
+  "author": "phamductinhkma@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "crypto-js": "^3.1.9-1",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "ipfs-http-client": "29.1.0",
+    "jsonwebtoken": "8.5.1",
+    "knex": "0.14.2",
+    "mysql": "2.16.0",
+    "web3": "^1.0.0-beta.46"
+  },
+  "devDependencies": {
+    "truffle": "5.0.5"
+  }
+}
