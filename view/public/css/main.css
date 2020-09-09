@@ -1,0 +1,217 @@
+table {
+  word-wrap: break-word;
+  table-layout: fixed;
+}
+.list-group-item {
+  word-break: break-all;
+}
+.pointer {
+  cursor: pointer;
+}
+.wraper {
+  position: relative;
+}
+
+.custom-toast {
+  min-height: 50px !important;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1040;
+  min-height: 4rem;
+  background-color: #20232a !important;
+}
+.sidebar {
+  position: sticky;
+  top: 4rem;
+  z-index: 1000;
+  height: calc(100vh - 4rem);
+  background-color: #f7f7f7;
+  border-right: 1px solid #ececec;
+}
+.sidebar .listmenu {
+  border-top: 1px solid #ececec;
+  overflow: hidden;
+  display: block!important;
+  height: 100%!important;
+}
+.sidebar .listmenu .nav-list {
+  height: 100%!important;
+  overflow: auto;
+  margin-right: -40px;
+  padding-right: calc(40px + 1rem);
+  display: block;
+}
+.nav-list a {
+  text-decoration: none;
+  color: rgba(26,26,26,.75);
+  transition: color .2s ease-out;
+}
+.nav-list a i{
+  margin-right: 10px;
+  width: 10px;
+  display: inline-block;
+}
+.nav-list a:hover {
+  text-decoration: none;
+  color: #999;
+  transition: color .2s ease-out;
+}
+.nav-list a.active {
+  font-weight: 500;
+  color: #1a1a1a!important;
+}
+.nav-list .title-nav {
+  font-size: 19px;
+  color: #1a1a1a!important;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.right-sidebar {
+  -webkit-order: 2;
+    order: 2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: .875rem;
+    overflow-y: auto;
+}
+.right-sidebar>ul {
+  padding-left: 0;
+  border-left: 1px solid #ececec;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.right-sidebar a {
+  display: block;
+  padding: .125rem 1.5rem;
+  color: rgba(26,26,26,.6);
+  text-decoration: unset;
+}
+.right-sidebar a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+.right-sidebar>ul ul {
+  padding-left: 1rem;
+}
+.main {
+  order: 1;
+  padding: 2rem 3rem;
+}
+.heading {
+  pointer-events: auto;
+}
+.heading .heading-inner {
+  position: relative;
+  display: inline-block;
+  padding-right: 1em;
+}
+.form-group .upload-input {
+  cursor: pointer;
+}
+.sweet-alert p span{
+  position: relative !important;
+}
+.card-header h5 {
+  margin: 0;
+}
+.card {
+  margin-bottom: 20px;
+}
+.card ul {
+  margin: 0;
+  padding-left: 5px;
+}
+.card ul li {
+  list-style: none;
+  padding-bottom: 10px;
+  margin-bottom: 13px;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card ul li .title {
+  float: left;
+  width: 15%;
+  font-weight: 500;
+}
+.card ul li span {
+  margin-left: 6px;
+}
+.admin-mem .badge-dark,.admin-mem .badge-success,.admin-mem .badge-secondary {
+  cursor: pointer;
+}
+.profile .badge-dark,.profile .badge-success,.profile .badge-secondary {
+  cursor: pointer;
+}
+.dashboard {
+  display: block;
+}
+.dashboard .info-box {
+  display: block;
+  min-height: 81px;
+  width: 100%;
+  border-radius: .25rem;
+  margin-bottom: 15px;
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+}
+.dashboard .info-box-icon {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: .25rem;
+  display: block;
+  float: left;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  font-size: 45px;
+  line-height: 80px;
+  background: rgba(0,0,0,0.2);
+  color: #f7f7f7;
+}
+.dashboard .info-box-content {
+  padding: 5px 5px;
+  margin-left: 90px;
+  font-weight: 500;
+}
+.dashboard .info-box-text {
+  display: block;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+}
+.dashboard .info-box-number {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+}
+.dashboard .blockchain {
+  margin-top: 20px;
+}
+ul.info {
+  margin: 0;
+  padding-left: 5px;
+}
+ul.info li {
+  list-style: none;
+  padding-bottom: 5px;
+  margin-bottom: 13px;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+ul.info li .title {
+  float: left;
+  width: 20%;
+}
+
+.list-btn button {
+  padding: 7.5px 8px;
+}

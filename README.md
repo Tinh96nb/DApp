@@ -26,4 +26,4 @@ $ yarn start
 - `/test`: run test smartcontract.
 - `/server`: nodejs connect to smartcontract.
 - `/migrations`: init database.
-- `/client`: front-end reactjs.
+- `/view`: front-end reactjs.
